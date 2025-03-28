@@ -1,0 +1,87 @@
+
+body {
+    background-color: rgb(181,200,201); /* Set the background color of the body */
+  }
+  
+  h1 {
+    color: rgb(38,54,46);
+    text-align: center;
+    border: 1px solid rgb(11, 15, 15);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(217,224,225);
+  }
+  .cluster-container {
+    border: 1px solid rgb(11, 15, 15);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(217,224,225);
+  }
+  .center {
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  .center td {
+    padding: 10px;
+  }
+  .center tr td:not(:last-child) {
+    padding-right: 20px;
+  }
+  h2 {
+    color: rgb(106, 46, 53);
+    margin-bottom: 5px;
+  }
+  
+  .pdf-link {
+    margin-right: 10px;
+    display: inline-block;
+    background-color: hsl(200, 60%, 59%);
+    color: hwb(308 5% 64%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .pdf-link:hover {
+    background-color: rgb(38,54,46);;
+  }
+  
+  
+  form {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+  }
+  
+  button[type="submit"] {
+    padding: 5px 10px;
+    background-color: rgb(217,224,225); 
+    color: hsl(180, 14%, 3%);
+    border: 1px solid rgb(11, 15, 15);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: rgb(38,54,46);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
