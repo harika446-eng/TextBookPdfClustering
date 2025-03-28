@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Clustering</title>
+    <style>
+        .cluster-card {
+            border: 1px solid #e9bcde;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .pdf-link {
+            margin-right: 10px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+
+</head>
+<body>
+    <h1>Clustered PDFs</h1>
+    <form action="/pdfs" method="GET">
+        <label for="keyword">Select Keyword:</label>
+        <select name="keyword" id="keyword">
+          <option value="vlsi">vlsi</option>
+          <option value="verilog">verilog</option>
+          <option value="sampling">sampling</option>
+          <option value="electrical">electrical machines</option>
+          <option value="transformer">transformer</option>
+          <option value="data">data</option>
+          <option value="regression">regression</option>
+          <option value="classification">classification</option>
+          <option value="probability">probability</option>
+          <option value="analysis">analysis</option>
+          <option value="framework">framework</option>
+          <option value="html"> html</option>
+          <option value="controller">controller</option>
+          <option value="processor">processor</option>
+          <option value="power">power systems</option>
+          <option value="software">software</option>
+          <option value="programming">programming</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+      
+    <form action="/upload" method="POST" enctype="multipart/form-data" onsubmit="showAlert();">
+        <script>
+            function showAlert() {
+                alert("The file will not be saved permanently!");
+                window.location.href = "/result";
+            }
+        </script>
+        <input type = "file" name="file" accept=".pdf">
+        <button type="submit">Upload</button>
+    </form>
+    
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-12">
+                <h2 class = "text">PDFs</h2>
+            </div>
+            {% set clusters = data['topic_name'].unique() %}
+
+            {% for cluster in clusters %}
+                <div class="cluster-container">
+                    <h2>{{ cluster }}</h2>
+                    <div class="pdf-row" style="display: flex; flex-wrap: wrap;">
+                    {% set cluster_rows = data[data['topic_name'] == cluster] %}
+                    {% for _, row in cluster_rows.iterrows() %}
+                        <div class="pdf-container" style="width: 25%;">
+                            <a class="iframe-link" href="{{ url_for('static', filename='data/' ~ row['url']) }}" target="_blank">
+                                <iframe src="{{ url_for('static', filename='data/' ~ row['url']) }}" width="90%" height="250px"></iframe>
+                                Click to open pdf
+                            </a>
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    
+</body>
+</html>
