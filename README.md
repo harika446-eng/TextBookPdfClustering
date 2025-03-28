@@ -1,21 +1,23 @@
 # TextBookPdfClustering
-[📄 View PDF](https://github.com/harika446-eng/TextBookPdfClustering/blob/Cluster Champs ppt.pdf)
-The objective of the project is to develop a website that can automatically organize and categorize textbooks based on their content, topics, or subject areas.
+[📄 View PDF](https://github.com/harika446-eng/TextBookPdfClustering/blob/main/Cluster%20Champs%20ppt.pdf)
+<p>The objective of the project is to develop a website that can automatically organize and categorize textbooks based on their content, topics, or subject areas.</p>
 
 Allows users to navigate through the collection of textbooks and find material related to specific subject more effectively, saving time and effort in finding specific information.
 
 ## Tools: 
 ### libraries : 
-● pandas, numpy, matplotlib : basic data 
-transformation and visualization 
-● PyPDF2 : text extraction 
-● dataprep : text cleaning
-● nltk : text processing and analysis
-● gensim : model development
+<p>● pandas, numpy, matplotlib : basic data transformation and visualization </p>
+<p>● PyPDF2 : text extraction </p>
+<p>● dataprep : text cleaning</p>
+<p>● nltk : text processing and analysis</p>
+<p>● gensim : model development</p>
+
+
+
 ### framework : 
 Flask - flexible way to develop 
 ### webpage frontend : 
-html,css
+<p>HTML, CSS</p>
 
 ## Data Collection : 
 Around 103 PDF files are collected from GitHub and other websites
